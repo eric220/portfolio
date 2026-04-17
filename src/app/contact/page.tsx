@@ -22,7 +22,7 @@ export default function ContactPage() {
         </p>
 
         <p>
-          <span className="font-medium">Phone:</span> (215) 223-1386
+          <span className="font-medium">Phone:</span> (251) 223-1386
         </p>
 
         <p>

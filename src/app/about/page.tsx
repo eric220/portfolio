@@ -37,14 +37,13 @@ export default function AboutPage() {
       <section className="space-y-4">
         <h2 className="text-xl font-semibold">Data Science & Modeling</h2>
         <p className="text-gray-700">
-          In addition to LLM systems, I have developed projects involving
-          similarity-based recommendation, geospatial probability modeling, and
+          In addition to LLM systems, I have developed projects involving deep learning, computer vision,
+          recommendation systems, geospatial probability modeling, and
           feature engineering for predictive models.
         </p>
         <p className="text-gray-700">
           My approach emphasizes clear problem framing, feature engineering
-          aligned with domain structure, and validation grounded in observed
-          behavior rather than metrics alone.
+          aligned with domain structure, and validation.
         </p>
       </section>
 
