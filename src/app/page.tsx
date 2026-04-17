@@ -29,7 +29,7 @@ export default function HomePage() {
         </p>
 
         <p>
-          Background includes geospatial modeling, recommendation systems, and statistical analysis.
+          Background includes machine learning, recommendation systems, geospatial modeling, and statistical analysis.
         </p>
       </div>
 
