@@ -197,7 +197,7 @@ export const projects: Project[] = [
     {
       title: "Overview",
       content:
-        "Built a multimodal pipeline that converts images of packaged products into structured, marketplace-ready listings. The system extracts identifying information from images, resolves product details through external lookup, and generates clean listing descriptions. A human-in-the-loop review step ensures accuracy before publishing, making the system practical for real resale workflows."
+        "Built a multimodal pipeline that converts images of packaged products into structured, marketplace-ready listings. The system extracts identifying information from images, resolves product details through external lookup, and generates clean listing descriptions. A human-in-the-loop ensures accuracy before publishing, making the system practical for real resale workflows."
     },
     {
       title: "Problem",

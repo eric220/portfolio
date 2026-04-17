@@ -31,7 +31,7 @@ export default function RootLayout({
         <header className="max-w-3xl mx-auto px-6 py-6 flex justify-between items-center">
           {/* Left: Name / Home */}
           <Link href="/" className="font-semibold">
-            Eric Criteser
+            Home
           </Link>
 
           {/* Right: Navigation */}
