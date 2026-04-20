@@ -47,13 +47,13 @@ export default function ContactPage() {
           </a>
         </p>
         <p>
-          <span className="font-medium">Resume Bot:</span>{" "}
+          <span className="font-medium">Resume:</span>{" "}
           <a
             href="https://www.erics-resume-bot.com"
             target="_blank"
             className="text-blue-600 hover:underline"
           >
-            My Resume
+            My Resume Bot
           </a>
         </p>  
       </div>
