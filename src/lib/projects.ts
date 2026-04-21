@@ -138,7 +138,9 @@ export const projects: Project[] = [
     {
       title: "Results",
       content:
-        "The model produced a habitat-level probability distribution of lionfish presence, highlighting distinct high-risk environments. Spatial visualization of the results showed coherent clustering of high-probability regions. Qualitative validation through field observation confirmed alignment between predicted high-probability zones and actual lionfish presence."
+        "The model produced a habitat-level probability distribution of lionfish presence, highlighting distinct high-risk environments. Spatial visualization of the results showed coherent clustering of high-probability regions. Qualitative validation through field observation confirmed alignment between predicted high-probability zones and actual lionfish presence.",
+      image: "/images/projects/lionfish/STJ.jpg",
+      imageCaption: "Lionfish observered between Honeymoon Beach and Salomon Beach"
     },
     {
       title: "Impact",

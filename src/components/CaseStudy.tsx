@@ -1,5 +1,7 @@
 // src/components/CaseStudy.tsx
 
+import Image from "next/image"
+
 type Section = {
   title: string
   content: string
@@ -47,11 +49,13 @@ export default function CaseStudy({ sections }: { sections: any[] }) {
 
           {section.image && (
             <div className="mt-4">
-              <img
-                src={section.image}
-                alt={section.imageCaption || section.title}
-                className="rounded border shadow"
-              />
+                <Image
+                    src={section.image}
+                    alt={section.imageCaption || section.title}
+                    width={800}
+                    height={450}
+                    className="rounded border shadow"
+                  />
 
               {section.imageCaption && (
                 <p className="text-sm text-gray-500 mt-2">
