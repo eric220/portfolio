@@ -245,7 +245,9 @@ export const projects: Project[] = [
     {
       title: "Human-in-the-Loop Review",
       content:
-        "Before publication, a user reviews the generated listing and underlying data. This step ensures accuracy in cases of ambiguity or incomplete information. The system is designed to accelerate the workflow by producing a strong first draft while allowing a subject matter expert to validate or correct results."
+        "Before publication, a user reviews the generated listing and underlying data. This step ensures accuracy in cases of ambiguity or incomplete information. The system is designed to accelerate the workflow by producing a strong first draft while allowing a subject matter expert to validate or correct results.",
+      image: "/images/projects/inventory/output.jpg",
+      imageCaption: "Image >>>>> Structured Output >>>>> Comparison"
     },
     {
       title: "Failure Modes",
