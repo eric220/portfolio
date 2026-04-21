@@ -75,10 +75,26 @@ export const projects: Project[] = [
         "Implemented a KNN-based recommender using cosine similarity to measure distance between wines in feature space. Used 5 nearest neighbors to generate recommendations. A key contribution was feature engineering: specifically, creating a feature representing the difference between acid z-score and alcohol z-score, which captured balance between acidity and alcohol content. This feature proved highly informative and also performed strongly in a separate Random Forest classification task. The system retrieves wines most similar to a selected input wine based on overall feature similarity."
     },
     {
-      title: "Results",
-      content:
-        "Evaluated recommendation quality through comparative visual analysis. Generated histograms comparing feature distributions of recommended wines against baseline groups (e.g., all wines of a given quality level). Results showed that recommended wines clustered more tightly around the input wine’s profile, indicating that the model successfully captured meaningful similarity relationships. Visual comparisons confirmed that recommendations aligned more closely with the target wine than with the broader dataset."
+  title: "Results",
+  content:
+    "Evaluated recommendation quality through comparative visual analysis. Histograms comparing feature distributions of recommended wines against baseline groups showed tighter clustering around the input wine’s profile, indicating meaningful similarity capture.",
+  statsTitle: "Hypothesis testing for alcohol acid difference. H0: there is no difference in the mean between the recommended wines and a representative sample of wines",
+
+  stats: [
+    {
+      label: "P-value",
+      value: "0.018"
     },
+    {
+      label: "Cohen’s d",
+      value: "0.542"
+    },
+    {
+      label: "Conclusion",
+      value: "Reject H0"
+    }
+  ]
+},
     {
       title: "Impact",
       content:
