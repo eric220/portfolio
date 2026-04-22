@@ -48,6 +48,111 @@ export const projects: Project[] = [
   github: "#",
   demo: "#"
 },
+{
+  slug: "closed-domain-qa-bot",
+  title: "Closed-Domain Question Answering System",
+  subtitle: "From lexical similarity to semantic retrieval with measurable accuracy gains",
+  tags: ["NLP", "Embeddings", "Similarity Search", "Machine Learning"],
+  sections: [
+    {
+      title: "Overview",
+      content:
+        "Built a closed-domain question answering system to return relevant answers from a predefined dataset. Iteratively improved the system by moving from lexical similarity methods to semantic embeddings, significantly increasing accuracy and response quality."
+    },
+    {
+      title: "Problem",
+      content:
+        "Traditional keyword-based approaches struggle to capture semantic meaning, leading to poor matches when user queries are phrased differently from stored answers. The goal was to improve answer relevance while maintaining a lightweight, efficient system."
+    },
+    {
+      title: "Data Preparation",
+      content:
+        "Preprocessed text data by removing punctuation and numbers, converting to lowercase, removing stopwords, and applying tokenization and lemmatization. This ensured consistent input for similarity comparisons and reduced noise in the dataset."
+    },
+    {
+      title: "Phase 1: Lexical Similarity",
+      content:
+        "Implemented a baseline system using Jaccard similarity to compare user queries against stored questions and answers. Returned the top 3 most similar matches and generated responses when similarity thresholds were met. This approach achieved approximately 85% accuracy but was limited in handling semantic variation."
+    },
+    {
+      title: "Phase 2: Semantic Retrieval",
+      content:
+        "Improved the system by introducing 256-dimensional semantic embeddings and cosine similarity. This allowed the model to capture meaning rather than exact word overlap, significantly improving performance on paraphrased queries. Responses were generated when similarity thresholds were met."
+    },
+    {
+      title: "Results",
+      content:
+        "The transition from lexical similarity to semantic embeddings improved accuracy from approximately 85% to 95%. The system demonstrated stronger performance on varied phrasing and more robust matching across semantically similar queries."
+    },
+    {
+      title: "Impact",
+      content:
+        "This project highlights the practical advantages of semantic retrieval over traditional keyword-based approaches. It demonstrates how relatively simple architectural changes—moving from token overlap to embeddings—can significantly improve system performance in real-world NLP applications."
+    }
+  ],
+  github: "#",
+  demo: "#"
+},
+    {
+  slug: "image-to-listing-automation",
+  title: "Image-to-Listing Automation System",
+  subtitle: "Multimodal pipeline for extracting product data and generating resale listings",
+  tags: ["LLM", "Multimodal", "OCR", "Entity Resolution", "Automation"],
+  sections: [
+    {
+      title: "Overview",
+      content:
+        "Built a multimodal pipeline that converts images of packaged products into structured, marketplace-ready listings. The system extracts identifying information from images, resolves product details through external lookup, and generates clean listing descriptions. A human-in-the-loop ensures accuracy before publishing, making the system practical for real resale workflows."
+    },
+    {
+      title: "Problem",
+      content:
+        "Reselling items from bulk inventory often requires identifying individual products with limited or inconsistent documentation. Determining compatibility, specifications, or use cases typically involves manual research using part numbers or manufacturer data. This process is time-consuming and limits the ability to efficiently monetize long-tail inventory."
+    },
+    {
+      title: "System Design",
+      content:
+        "The system is structured as a modular pipeline: image ingestion → text extraction → entity normalization → external lookup → listing generation → human review. Each stage transforms unstructured input into progressively more structured data, allowing components to be improved independently while maintaining overall system reliability."
+    },
+    {
+      title: "Image and Text Extraction",
+      content:
+        "Images of packaged products are processed using OCR to extract key identifiers such as model numbers and manufacturer information. Preprocessing techniques handle noise such as inconsistent lighting, angles, and label formats. The extraction step prioritizes capturing all potential identifiers, with validation deferred to later stages."
+    },
+    {
+      title: "Entity Resolution and Lookup",
+      content:
+        "Extracted identifiers are normalized and used to query external sources to determine product specifications and applications. This step operates as an entity resolution problem, where imperfect or partial inputs must map to real-world products. Candidate matches are ranked to handle ambiguity rather than forcing a single deterministic result."
+    },
+    {
+      title: "Listing Generation",
+      content:
+        "An LLM generates concise, structured listing descriptions using the resolved product data. Prompts are designed to constrain tone and format, ensuring consistency and reducing hallucination risk. The model operates on structured inputs rather than raw text, improving reliability and alignment with marketplace requirements."
+    },
+    {
+      title: "Human-in-the-Loop Review",
+      content:
+        "Before publication, a user reviews the generated listing and underlying data. This step ensures accuracy in cases of ambiguity or incomplete information. The system is designed to accelerate the workflow by producing a strong first draft while allowing a subject matter expert to validate or correct results.",
+      image: "/images/projects/inventory/output.jpg",
+      imageCaption: "Image >>>>> Structured Output >>>>> Comparison"
+    },
+    {
+      title: "Failure Modes",
+      content:
+        "Key challenges include poor image quality, incomplete identifiers, and inconsistent external data sources. Ambiguity in product matching can lead to multiple plausible results. These risks are mitigated through candidate ranking, conservative generation strategies, and mandatory human validation before publishing."
+    },
+    {
+      title: "Impact",
+      content:
+        "The system reduces the time required to research and list individual items, enabling more efficient processing of bulk inventory. By transforming unstructured images into structured, sellable data, it demonstrates how multimodal AI systems can support real-world, revenue-generating workflows."
+    },
+    {
+      title: "Next Steps",
+      content:
+        "Future improvements include integrating higher-quality data sources, adding confidence scoring across pipeline stages, and incorporating feedback loops from human corrections to improve accuracy over time. Expanding batch processing capabilities would further increase throughput and usability."
+    }
+  ]
+},
     {
   slug: "knn-wine-recommender",
   title: "KNN-Based Wine Recommendation System",
@@ -161,109 +266,4 @@ export const projects: Project[] = [
   github: "#",
   demo: "#"
 },
-    {
-  slug: "closed-domain-qa-bot",
-  title: "Closed-Domain Question Answering System",
-  subtitle: "From lexical similarity to semantic retrieval with measurable accuracy gains",
-  tags: ["NLP", "Embeddings", "Similarity Search", "Machine Learning"],
-  sections: [
-    {
-      title: "Overview",
-      content:
-        "Built a closed-domain question answering system to return relevant answers from a predefined dataset. Iteratively improved the system by moving from lexical similarity methods to semantic embeddings, significantly increasing accuracy and response quality."
-    },
-    {
-      title: "Problem",
-      content:
-        "Traditional keyword-based approaches struggle to capture semantic meaning, leading to poor matches when user queries are phrased differently from stored answers. The goal was to improve answer relevance while maintaining a lightweight, efficient system."
-    },
-    {
-      title: "Data Preparation",
-      content:
-        "Preprocessed text data by removing punctuation and numbers, converting to lowercase, removing stopwords, and applying tokenization and lemmatization. This ensured consistent input for similarity comparisons and reduced noise in the dataset."
-    },
-    {
-      title: "Phase 1: Lexical Similarity",
-      content:
-        "Implemented a baseline system using Jaccard similarity to compare user queries against stored questions and answers. Returned the top 3 most similar matches and generated responses when similarity thresholds were met. This approach achieved approximately 85% accuracy but was limited in handling semantic variation."
-    },
-    {
-      title: "Phase 2: Semantic Retrieval",
-      content:
-        "Improved the system by introducing 256-dimensional semantic embeddings and cosine similarity. This allowed the model to capture meaning rather than exact word overlap, significantly improving performance on paraphrased queries. Responses were generated when similarity thresholds were met."
-    },
-    {
-      title: "Results",
-      content:
-        "The transition from lexical similarity to semantic embeddings improved accuracy from approximately 85% to 95%. The system demonstrated stronger performance on varied phrasing and more robust matching across semantically similar queries."
-    },
-    {
-      title: "Impact",
-      content:
-        "This project highlights the practical advantages of semantic retrieval over traditional keyword-based approaches. It demonstrates how relatively simple architectural changes—moving from token overlap to embeddings—can significantly improve system performance in real-world NLP applications."
-    }
-  ],
-  github: "#",
-  demo: "#"
-},
-    {
-  slug: "image-to-listing-automation",
-  title: "Image-to-Listing Automation System",
-  subtitle: "Multimodal pipeline for extracting product data and generating resale listings",
-  tags: ["LLM", "Multimodal", "OCR", "Entity Resolution", "Automation"],
-  sections: [
-    {
-      title: "Overview",
-      content:
-        "Built a multimodal pipeline that converts images of packaged products into structured, marketplace-ready listings. The system extracts identifying information from images, resolves product details through external lookup, and generates clean listing descriptions. A human-in-the-loop ensures accuracy before publishing, making the system practical for real resale workflows."
-    },
-    {
-      title: "Problem",
-      content:
-        "Reselling items from bulk inventory often requires identifying individual products with limited or inconsistent documentation. Determining compatibility, specifications, or use cases typically involves manual research using part numbers or manufacturer data. This process is time-consuming and limits the ability to efficiently monetize long-tail inventory."
-    },
-    {
-      title: "System Design",
-      content:
-        "The system is structured as a modular pipeline: image ingestion → text extraction → entity normalization → external lookup → listing generation → human review. Each stage transforms unstructured input into progressively more structured data, allowing components to be improved independently while maintaining overall system reliability."
-    },
-    {
-      title: "Image and Text Extraction",
-      content:
-        "Images of packaged products are processed using OCR to extract key identifiers such as model numbers and manufacturer information. Preprocessing techniques handle noise such as inconsistent lighting, angles, and label formats. The extraction step prioritizes capturing all potential identifiers, with validation deferred to later stages."
-    },
-    {
-      title: "Entity Resolution and Lookup",
-      content:
-        "Extracted identifiers are normalized and used to query external sources to determine product specifications and applications. This step operates as an entity resolution problem, where imperfect or partial inputs must map to real-world products. Candidate matches are ranked to handle ambiguity rather than forcing a single deterministic result."
-    },
-    {
-      title: "Listing Generation",
-      content:
-        "An LLM generates concise, structured listing descriptions using the resolved product data. Prompts are designed to constrain tone and format, ensuring consistency and reducing hallucination risk. The model operates on structured inputs rather than raw text, improving reliability and alignment with marketplace requirements."
-    },
-    {
-      title: "Human-in-the-Loop Review",
-      content:
-        "Before publication, a user reviews the generated listing and underlying data. This step ensures accuracy in cases of ambiguity or incomplete information. The system is designed to accelerate the workflow by producing a strong first draft while allowing a subject matter expert to validate or correct results.",
-      image: "/images/projects/inventory/output.jpg",
-      imageCaption: "Image >>>>> Structured Output >>>>> Comparison"
-    },
-    {
-      title: "Failure Modes",
-      content:
-        "Key challenges include poor image quality, incomplete identifiers, and inconsistent external data sources. Ambiguity in product matching can lead to multiple plausible results. These risks are mitigated through candidate ranking, conservative generation strategies, and mandatory human validation before publishing."
-    },
-    {
-      title: "Impact",
-      content:
-        "The system reduces the time required to research and list individual items, enabling more efficient processing of bulk inventory. By transforming unstructured images into structured, sellable data, it demonstrates how multimodal AI systems can support real-world, revenue-generating workflows."
-    },
-    {
-      title: "Next Steps",
-      content:
-        "Future improvements include integrating higher-quality data sources, adding confidence scoring across pipeline stages, and incorporating feedback loops from human corrections to improve accuracy over time. Expanding batch processing capabilities would further increase throughput and usability."
-    }
-  ]
-}
 ]
