@@ -17,7 +17,7 @@ export default function HomePage() {
       </div>
 
       <h1 className="text-4xl font-bold tracking-tight text-center">
-        Applied AI Developer | LLM Systems
+        Applied AI | LLM Systems
       </h1>
 
       <div className="mt-6 text-lg text-gray-600 space-y-4 text-center">
