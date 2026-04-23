@@ -6,7 +6,7 @@ export const projects: Project[] = [
     {
   slug: "voice-ticketing-system",
   title: "Voice-Driven Service Ticketing System",
-  subtitle: "AI-powered heads up display workflow automation for service operations",
+  subtitle: "AI-powered heads up display workflow automation",
   tags: ["LLM", "Voice Interface", "RAG", "Automation", "Wearable Technology"],
   sections: [
     {
