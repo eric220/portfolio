@@ -122,7 +122,7 @@ export const projects: Project[] = [
     {
       title: "Entity Resolution and Lookup",
       content:
-        "Extracted identifiers are normalized and used to query external sources to determine product specifications and applications. This step operates as an entity resolution problem, where imperfect or partial inputs must map to real-world products. Candidate matches are ranked to handle ambiguity rather than forcing a single deterministic result."
+        "Extracted identifiers are used to query external sources to determine product specifications and applications. This step operates as an entity resolution problem, where imperfect or partial inputs must map to real-world products. Candidate matches are ranked to handle ambiguity rather than forcing a single deterministic result."
     },
     {
       title: "Listing Generation",
