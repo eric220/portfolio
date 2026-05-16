@@ -50,9 +50,9 @@ export const projects: Project[] = [
 },
 {
   slug: "closed-domain-qa-bot",
-  title: "Closed-Domain Question Answering System",
+  title: "Closed-Domain Question Answering RAG Bot",
   subtitle: "From lexical similarity to semantic retrieval with measurable accuracy gains",
-  tags: ["NLP", "Embeddings", "Similarity Search", "Machine Learning"],
+  tags: ["NLP", "Embeddings", "Similarity Search", "Machine Learning", "Retrieval Augmented Generation"],
   sections: [
     {
       title: "Overview",
@@ -72,17 +72,17 @@ export const projects: Project[] = [
     {
       title: "Phase 1: Lexical Similarity",
       content:
-        "Implemented a baseline system using Jaccard similarity to compare user queries against stored questions and answers. Returned the top 3 most similar matches and generated responses when similarity thresholds were met. This approach achieved approximately 85% accuracy but was limited in handling semantic variation."
+        "Implemented a baseline system using Jaccard similarity to compare user queries against stored answers. Returned the top 3 most similar matches and generated responses, allowing the LLM to handle ambiguities. This approach achieved approximately 85% accuracy but was limited in handling semantic variation."
     },
     {
       title: "Phase 2: Semantic Retrieval",
       content:
-        "Improved the system by introducing 256-dimensional semantic embeddings and cosine similarity. This allowed the model to capture meaning rather than exact word overlap, significantly improving performance on paraphrased queries. Responses were generated when similarity thresholds were met."
+        "Improved the system by introducing 256-dimensional semantic embeddings and cosine similarity to score question answer pairing. Thresholding limited the number of possible answers reducing the context window, and the LLM navigated the ambiguity. This allowed the RAGBot to capture meaning rather than exact word overlap, significantly improving performance on natural language queries."
     },
     {
       title: "Results",
       content:
-        "The transition from lexical similarity to semantic embeddings improved accuracy from approximately 85% to 95%. The system demonstrated stronger performance on varied phrasing and more robust matching across semantically similar queries."
+        "The transition from lexical similarity to semantic embeddings improved accuracy, manually crosschecking the response with the ground truth, from approximately 85% to 95%. The system demonstrated stronger performance on varied phrasing and more robust matching across semantically similar queries."
     },
     {
       title: "Impact",
