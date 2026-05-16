@@ -7,7 +7,7 @@ export const projects: Project[] = [
   slug: "voice-ticketing-system",
   title: "Voice-Driven Service Ticketing System",
   subtitle: "AI-powered heads up display workflow automation",
-  tags: ["LLM", "Voice Interface", "RAG", "Automation", "Wearable Technology"],
+  tags: ["LLM", "Voice Interface", "RAG", "Automation", "Wearable Technology", "Vector Data Base"],
   sections: [
     {
       title: "Overview",
@@ -62,7 +62,7 @@ export const projects: Project[] = [
     {
       title: "Problem",
       content:
-        "Traditional keyword-based approaches struggle to capture semantic meaning, leading to poor matches when user queries are phrased differently from stored answers. The goal was to improve answer relevance while maintaining a lightweight, efficient system."
+        "Traditional keyword-based approaches struggle to capture semantic meaning, possibly leading to poor matches when user queries are phrased differently from stored answers. The goal was to improve answer relevance while maintaining a lightweight, efficient system."
     },
     {
       title: "Data Preparation",
@@ -77,7 +77,7 @@ export const projects: Project[] = [
     {
       title: "Phase 2: Semantic Retrieval",
       content:
-        "Improved the system by introducing 256-dimensional semantic embeddings and cosine similarity to score question answer pairing. Thresholding limited the number of possible answers reducing the context window, and the LLM navigated the ambiguity. This allowed the RAGBot to capture meaning rather than exact word overlap, significantly improving performance on natural language queries."
+        "Improved the system by replacing exact word matching with 256-dimensional semantic embeddings and cosine similarity. The two highest-scoring answer candidates are passed into the LLM’s context window, allowing the model to resolve ambiguity and generate a more accurate response. This gave the RAG bot the ability to match based on meaning rather than surface-level word overlap, improving performance on natural-language queries."
     },
     {
       title: "Results",
