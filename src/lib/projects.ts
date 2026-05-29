@@ -85,6 +85,28 @@ export const projects: Project[] = [
         "The transition from lexical similarity to semantic embeddings improved accuracy, manually crosschecking the response with the ground truth, from approximately 85% to 95%. The system demonstrated stronger performance on varied phrasing and more robust matching across semantically similar queries."
     },
     {
+      title: "Validation",
+      content:
+        "Added an LLM-based validation layer to evaluate RAG bot responses against ground-truth answers. The judge classifies each response as correct, mostly correct, incomplete, unsupported, contradictory, or hallucinated, then assigns a score based on the assessment. These results are aggregated into metrics such as grounded accuracy score, contradiction rate, and hallucination rate, providing a structured way to measure answer quality, detect drift, and track system reliability over time.",
+         statsTitle: "Results of LLM Judge on Ground Truth",
+
+  stats: [
+    {
+      label: "Grounded Accuracy Score",
+      value: "94.0"
+    },
+    {
+      label: "Contradiction Rate",
+      value: "0.0"
+    },
+    {
+      label: "Hallucination Rate",
+      value: "0.0"
+    },
+  ],
+    },
+
+    {
       title: "Impact",
       content:
         "This project highlights the practical advantages of semantic retrieval over traditional keyword-based approaches. It demonstrates how relatively simple architectural changes—moving from token overlap to embeddings—can significantly improve system performance in real-world NLP applications."
